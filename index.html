@@ -16,6 +16,14 @@
     .btn.outline{border:1px solid #c29b00;color:#a37f00}
     img{width:96px;height:96px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.15))}
   </style>
+  <script>
+    // Redirect from IDN domain (złoty-żółwik.pl) to ASCII domain (zloty-zolwik.pl)
+    if (window.location.host.includes('xn--')) {
+      const target = new URL(window.location.href);
+      target.host = 'zloty-zolwik.pl';
+      window.location.replace(target.toString());
+    }
+  </script>
 </head>
 <body>
   <main class="card">
